@@ -59,7 +59,9 @@ public class NationalExpressExtensionParser implements ExtensionParser {
     String latValue = parser.pop(10);
     String lonValue = parser.pop(11);
     if (latValue.isEmpty() || lonValue.isEmpty()) {
-      return;
+      // National Express House, Birmingham ;-)
+      latValue = "52.4753065";
+      lonValue = "-1.8882036";
     }
     element.setLat(Double.parseDouble(latValue));
     element.setLon(Double.parseDouble(lonValue));
